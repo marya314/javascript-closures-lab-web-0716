@@ -1,3 +1,5 @@
+"use strict";
+
 describe('closures', function() {
   describe('Three point turn', function () {
     it('should have a `bumpCounter()` function', () => {
@@ -10,23 +12,23 @@ describe('closures', function() {
       expect(window.counter).toNotExist();
     });
 
-    it('should return the `addBump()` and `getBumps()` function', () => {
-      const { addBump, getBumps } = bumpCounter();
-      expect(addBump).toBeA('function');
-      expect(getBumps).toBeA('function');
-    });
-
-    it('should return the counter when `getBumps()` is called', () => {
-      const { getBumps } = bumpCounter();
-      expect(getBumps()).toBeA('number');
-    });
-
-    it('should increase the counter when `addBump()` is called', () => {
-      const { addBump, getBumps } = bumpCounter();
-      expect(getBumps()).toEqual(0);
-      addBump();
-      expect(getBumps()).toEqual(1);
-    });
+    // it('should return the `addBump()` and `getBumps()` function', () => {
+    //   const { addBump, getBumps } = bumpCounter();
+    //   expect(addBump).toBeA('function');
+    //   expect(getBumps).toBeA('function');
+    // });
+    //
+    // it('should return the counter when `getBumps()` is called', () => {
+    //   const { getBumps } = bumpCounter();
+    //   expect(getBumps()).toBeA('number');
+    // });
+    //
+    // it('should increase the counter when `addBump()` is called', () => {
+    //   const { addBump, getBumps } = bumpCounter();
+    //   expect(getBumps()).toEqual(0);
+    //   addBump();
+    //   expect(getBumps()).toEqual(1);
+    // });
   });
 
   describe('Dangerous animals', function () {
